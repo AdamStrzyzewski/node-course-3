@@ -72,3 +72,6 @@ ssh root@123.421.24.12
 
 albo user+password
 albo ssh key
+
+
+sftp -> rzadko przy node

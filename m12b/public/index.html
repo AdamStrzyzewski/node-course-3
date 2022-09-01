@@ -1,0 +1,15 @@
+<html>
+  <head>
+    <script src="/socket.io/socket.io.js"></script>
+  </head>
+  <body>
+    <script>
+      const socket = io.connect("/");
+      socket.on("message", (data) => {
+        const p = document.createElement("p");
+        p.innerHTML = JSON.stringify(data);
+        document.body.appendChild(p);
+      });
+    </script>
+  </body>
+</html>

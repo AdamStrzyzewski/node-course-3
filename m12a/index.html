@@ -1,0 +1,16 @@
+<html>
+  <head>
+    <script>
+      window.onload = () => {
+        // obsługę połączenie web socket
+        const ws = new WebSocket("ws://localhost:8080");
+        ws.onmessage = (m) => {
+          const p = document.createElement("p");
+          p.innerHTML = m.data;
+          document.body.appendChild(p);
+        };
+      };
+    </script>
+  </head>
+  <body></body>
+</html>
